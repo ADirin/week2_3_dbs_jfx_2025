@@ -25,7 +25,7 @@ public class LocalizationController {
 
     @FXML
     public void initialize() {
-        languageSelector.getItems().addAll("English", "French", "Spanish");
+        languageSelector.getItems().addAll("English", "French", "Spanish", "日本語");
         languageSelector.setValue("English");
 
         languageSelector.setOnAction(event -> changeLanguage());
@@ -74,6 +74,7 @@ public class LocalizationController {
         return switch (language) {
             case "French" -> "fr";
             case "Spanish" -> "es";
+            case "日本語" -> "ja";
             default -> "en";
         };
     }
